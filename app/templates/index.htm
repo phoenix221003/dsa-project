@@ -1,0 +1,389 @@
+<!-- Main Page (Index) - HTML  FILE -->
+
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <!-- Metas -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- Title  -->
+    <title>Encryptor</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Encryptor/img/favicon.ico" />
+
+    <!-- Plugins -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/plugins.css') }}"
+    />
+
+    <!-- Core Style Css -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/style.css') }}"
+    />
+    <!-- Extra styling -->
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .disabled {
+        cursor: not-allowed;
+      }
+      .styled-font2 {
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 400;
+        font-size: 35px;
+        text-transform: uppercase;
+        letter-spacing: 6.5px;
+        margin: 0;
+        color: #000;
+        margin-bottom: 25px;
+      }
+    </style>
+  </head>
+  <!-- =====================================
+    	==== Start Body -->
+  <body
+    data-new-gr-c-s-check-loaded="14.1006.0"
+    data-gr-ext-installed=""
+    class="vsc-initialized"
+  >
+    <!-- =====================================
+    	==== Start Navbar -->
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Logo -->
+        <a class="logo" href="/">
+          <h4 class="styled-font" style="color: white !important">Encryptor</h4>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="icon-bar"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <!-- navbar links -->
+      </div>
+    </nav>
+
+    <!-- End Navbar ====
+    	======================================= -->
+
+    <!-- =====================================
+    	==== Start Header -->
+
+    <header
+      class="header valign bg-img creative"
+      data-scroll-index="0"
+      data-overlay-dark="5"
+      data-background="static/images/back.jpg"
+      data-stellar-background-ratio="0.5"
+      style="
+        background-image: url('static/images/back.jpg');
+        background-position: 0px 0px;
+      "
+    >
+      <div class="svg">
+        <svg x="0px" y="0px" viewBox="0 186.5 1920 113.5">
+          <polygon
+            points="-30,300 355.167,210.5 1432.5,290 1920,198.5 1920,300"
+          ></polygon>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div
+          class="row pt-5 pb-5 pr-4 pl-4"
+          style="background-color: rgba(0, 0, 0, 0.7)"
+        >
+          <div class="full-width text-center caption mt-30 ml-4 mr-4">
+            <h3 class="text-white">
+              We Are <span class="styled-font">Encryptor</span>
+            </h3>
+            <h1 class="cd-headline clip">
+              <span class="blc">We help</span>
+              <span class="cd-words-wrapper" style="width: 328.984px">
+                <b class="is-visible">Protect</b>
+                <b class="is-hidden">Secure</b>
+                <b class="is-hidden">Safe guard</b>
+              </span>
+            </h1>
+
+            <!-- Decryption form -->
+
+            <form
+              id="decryption-form"
+              class="w-75 m-auto"
+              method="POST"
+              action=""
+              id="form"key
+              enctype="multipart/form-data"
+            >
+              <div class="form-group">
+                <label for="key">File </label>
+                <input
+                  type="text"
+                  placeholder="Enter any key"
+                  name="dKey"
+                  id="dKey"
+                  required
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="file">File </label>
+                <input
+                  type="file"
+                  required="required"
+                  name="dFile"
+                  id="dFile"
+                  class="form-control"
+                />
+                <small
+                  class="text-white d-none"
+                  id="dError"
+                  style="float: left"
+                >
+                  <span class="text-danger h5">*</span>File and key both are
+                  required
+                </small>
+              </div>
+              <br />
+
+              <a id="submit-de" class="butn butn-bg">
+                <span>Decrypt</span>
+              </a>
+            </form>
+            <!-- Encryption form -->
+            <form
+              id="encryption-form"
+              class="w-75 m-auto"
+              method="POST"
+              action=""
+              id="form"
+              enctype="multipart/form-data"
+            >
+              <div class="form-group">
+                <label for="key">File </label>
+                <input
+                  type="text"
+                  placeholder="Enter any key"
+                  name="key"
+                  id="key"
+                  class="form-control"
+                />
+                <small
+                  class="text-white d-none"
+                  id="eError"
+                  style="float: left"
+                >
+                  <span class="text-danger h5">*</span>Key is required as you
+                  want your own custom key. Length: 12 or max words.
+                </small>
+                <br />
+              </div>
+              <div class="form-check" style="float: left">
+                <label class="form-check-label text-white">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    name="key-creator"
+                    id="key-creator"
+                  />
+                  Let us create the key for you.
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="file">File </label>
+                <input
+                  type="file"
+                  required="required"
+                  name="eFile"
+                  id="eFile"
+                  class="form-control"
+                />
+                <small class="text-white d-none" id="error" style="float: left">
+                  <span class="text-danger h5">*</span>File is required
+                </small>
+              </div>
+
+              <input type="hidden" name="type" id="type" value="encryption" />
+              <br />
+
+              <a id="submit-en" class="butn butn-bg">
+                <span>Encrypt</span>
+              </a>
+            </form>
+            <div id="loading" class="jumbotron text-center">Loading...</div>
+            <br />
+            <a class="butn butn-bord" id="show-decrypt">
+              <span>Try Decryption</span>
+            </a>
+            <a class="butn butn-bord" id="show-encrypt">
+              <span>Try Encryption</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- End Header ====
+    	======================================= -->
+    <!-- Start About ====
+        ======================================= -->
+
+    <!-- <div id="About" style="margin-top: 90px">
+      <div class="container text-center">
+        <div class="h1 styled-font2">A little information About us</div>
+        <p>
+          In cryptography, encryption is the process of transforming information
+          (referred to as plaintext) using an algorithm (called cipher) to make
+          it unreadable to anyone except those possessing special knowledge,
+          usually referred to as a key. We are applying the same approach but
+          not using any encrypting algorithm but instead of that making our own
+          depending upon Data structures, sorting algorithms, and
+          One-Hot-Encoding logic. The user just has to upload text files and the
+          rest is on us.
+        </p>
+        <p>
+          Also this algorithm is just for knowledge purposes. We use DSA and
+          python techniques to evolve the text in the encryption form. Don't use
+          it for higher encryption purposes SHA-256 is always better than our
+          algorithm.
+        </p>
+      </div>
+    </div> -->
+    <!-- End About ====
+        ======================================= -->
+
+    <!-- Start About ====
+        ======================================= -->
+
+    <!-- End Feedback ====
+        ======================================= -->
+    <!-- =====================================
+    	==== Start Footer -->
+ 
+    <!-- End Footer ====
+    	======================================= -->
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename= 'js/jquery-3.0.0.min.js') }}"></script>
+
+    <!-- popper.min -->
+    <script src=".{{ url_for('static', filename= 'js/popper.min.js') }}"></script>
+
+    <!-- bootstrap -->
+    <script src="{{ url_for('static', filename= 'js/bootstrap.min.js') }}"></script>
+
+    <!-- animated.headline -->
+    <script src=".{{ url_for('static', filename= 'js/animated.headline.js') }}"></script>
+
+    <!-- Extra JS/JQuery code for validations  -->
+    <script>
+      // Running on load to check wether the key checkbox is enabled or not
+      $(function () {
+        enable_cb();
+        $("#key-creator").click(enable_cb);
+      });
+
+      // declaring variables
+      var encryptForm = document.getElementById("encryption-form");
+      var decryptForm = document.getElementById("decryption-form");
+      var loading = document.getElementById("loading");
+      var encrypt = document.getElementById("show-encrypt");
+      var decrypt = document.getElementById("show-decrypt");
+
+      // default state - hiding forms
+      loading.style = "display: none";
+      encryptForm.style = "display: none";
+      decryptForm.style = "display: none";
+
+      // onClick function of Try encrption button
+      encrypt.onclick = function () {
+        encryptForm.style = "display: none";
+        decryptForm.style = "display: none";
+        encrypt.style = "display: none";
+        loading.style = "display: block";
+        decrypt.style = "display: block";
+        setTimeout(() => {
+          loading.style = "display: none";
+          encryptForm.style = "display: block";
+        }, 2000);
+      };
+
+      // onClick function of Try decrption button
+      decrypt.onclick = function () {
+        console.log("decrupt");
+        encryptForm.style = "display: none";
+        decryptForm.style = "display: none";
+        loading.style = "display: block";
+        encrypt.style = "display: block";
+        decrypt.style = "display: none";
+
+        setTimeout(() => {
+          loading.style = "display: none";
+          decryptForm.style = "display: block";
+        }, 2000);
+      };
+
+      // checkbox enabled/disabled check
+      function enable_cb() {
+        if (this.checked) {
+          $("#key").addClass("disabled");
+          $("#key").attr("disabled", "disabled");
+        } else {
+          $("#key").removeAttr("disabled");
+          $("#key").removeClass("disabled");
+        }
+      }
+
+      // submiting encryption form with validation check
+      $("#submit-en").on("click", function (e) {
+        e.preventDefault();
+
+        var customKey = $("#key-creator").prop("checked") == true;
+        console.log(customKey);
+
+        if (!customKey) {
+          if ($("#key").val().length >= 12) {
+            $("#eError").addClass("d-none");
+            if ($("#eFile").val()) {
+              $("#encryption-form").submit();
+            } else $("#error").removeClass("d-none");
+          } else $("#eError").removeClass("d-none");
+        } else {
+          $("#eError").addClass("d-none");
+          if ($("#eFile").val()) {
+            $("#encryption-form").submit();
+          } else $("#error").removeClass("d-none");
+        }
+      });
+      // submiting decryption form with validation check
+      $("#submit-de").on("click", function (e) {
+        e.preventDefault();
+
+        if ($("#dFile").val() && $("#dKey").val()) {
+          $("#decryption-form").submit();
+        } else $("#dError").removeClass("d-none");
+      });
+    </script>
+  </body>
+</html>

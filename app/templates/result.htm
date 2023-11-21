@@ -1,0 +1,234 @@
+<!-- Result - HTML  FILE -->
+
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <!-- Metas -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- Title  -->
+    <title>Encryptor</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Encryptor/img/favicon.ico" />
+
+    <!-- Plugins -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/plugins.css') }}"
+    />
+
+    <!-- Core Style Css -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/style.css') }}"
+    />
+    <style>
+      <!-- Extra styling -- > html {
+        scroll-behavior: smooth;
+      }
+      .disabled {
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <!-- =====================================
+    	==== Start Body -->
+  <body
+    data-new-gr-c-s-check-loaded="14.1006.0"
+    data-gr-ext-installed=""
+    class="vsc-initialized"
+  >
+    <!-- =====================================
+    	==== Start Navbar -->
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Logo -->
+        <a class="logo" href="/">
+          <h4 class="styled-font" style="color: white !important">Encryptor</h4>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="icon-bar"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <!-- navbar links -->
+      </div>
+    </nav>
+
+    <!-- End Navbar ====
+    	======================================= -->
+
+    <!-- =====================================
+    	==== Start Header -->
+
+    <header
+      class="header valign bg-img creative"
+      data-scroll-index="0"
+      data-overlay-dark="5"
+      data-background="static/images/back.jpg"
+      data-stellar-background-ratio="0.5"
+      style="
+        background-image: url('static/images/back.jpg');
+        background-position: 0px 0px;
+      "
+    >
+      <div class="svg">
+        <svg x="0px" y="0px" viewBox="0 186.5 1920 113.5">
+          <polygon
+            points="-30,300 355.167,210.5 1432.5,290 1920,198.5 1920,300"
+          ></polygon>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="row p-5" style="background-color: rgba(0, 0, 0, 0.7)">
+          <div class="full-width text-center caption mt-30">
+            <h3 class="text-white">
+              We Are <span class="styled-font">Encryptor</span>
+            </h3>
+            <h1 class="cd-headline clip">
+              <span class="blc">We help</span>
+              <span class="cd-words-wrapper" style="width: 328.984px">
+                <b class="is-visible">Protect</b>
+                <b class="is-hidden">Secure</b>
+                <b class="is-hidden">Safe guard</b>
+              </span>
+            </h1>
+            <div class="jumbotron bg-transparent p-2 w-75 m-auto">
+              <h3 class="h5 text-white">Here is your file</h3>
+              <hr class="my-2 bg-light" />
+              <p>Key: {{key}}</p>
+              <p>
+                Keep it hidden from the people you don't trust for the security
+                of the file and yours too.
+              </p>
+              <!-- <div class="container"> -->
+                <!-- <form class="form-inline w-100 ml-5">
+                  <div class="form-group mt-4 w-50 bg-danger ml-5">
+                    <input
+                      type="text"
+                      placeholder="Enter email"
+                      class="form-control w-100"
+                      id="email"
+                      placeholder="email"
+                    />
+                  </div>
+                  <a type="submit" id="sendMail" class="butn butn-bord">Send</a>
+
+                </form> -->
+                                  <!-- <small id="error" class="text-white d-none"
+                    ><span class="text-danger">*</span> Please enter a valid
+                    email address</small
+                  > -->
+              <!-- </div> -->
+              <p class="lead">
+                <a
+                  href="/uploads/{{filename}}"
+                  target="_blank"
+                  class="butn butn-bg"
+                >
+                  <span>Download</span>
+                </a>
+                <br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrow">
+        <a href="Encryptor/creative.html#" data-scroll-nav="1" class="">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </header>
+
+    <!-- End Header ====
+    	======================================= -->
+    <!-- Start About ====
+        ======================================= -->
+
+    <!-- <div id="About" style="margin-top: 90px">
+      <div class="container text-center">
+        <div class="h1 styled-font2">A little information About us</div>
+        <p>
+          In cryptography, encryption is the process of transforming information
+          (referred to as plaintext) using an algorithm (called cipher) to make
+          it unreadable to anyone except those possessing special knowledge,
+          usually referred to as a key. We are applying the same approach but
+          not using any encrypting algorithm but instead of that making our own
+          depending upon Data structures, sorting algorithms, and
+          One-Hot-Encoding logic. The user just has to upload text files and the
+          rest is on us.
+        </p>
+        <p>
+          Also this algorithm is just for knowledge purposes. We use DSA and
+          python techniques to evolve the text in the encryption form. Don't use
+          it for higher encryption purposes SHA-256 is always better than our
+          algorithm.
+        </p>
+      </div>
+    </div> -->
+    <!-- End About ====
+        ======================================= -->
+
+    <!-- Start About ====
+        ======================================= -->
+
+    
+    <!-- End Footer ====
+    	======================================= -->
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename= 'js/jquery-3.0.0.min.js') }}"></script>
+
+    <!-- popper.min -->
+    <script src=".{{ url_for('static', filename= 'js/popper.min.js') }}"></script>
+
+    <!-- bootstrap -->
+    <script src="{{ url_for('static', filename= 'js/bootstrap.min.js') }}"></script>
+
+    <!-- animated.headline -->
+    <script src=".{{ url_for('static', filename= 'js/animated.headline.js') }}"></script>
+    <!-- <script>
+      // handline email button click
+      $("#sendMail").on("click", function (e) {
+        e.preventDefault();
+
+        // regex expression for emails;
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+        var key = "{{key}}";
+        var filename = "{{filename}}";
+        var email = $("#email").val();
+
+        var URL = "/sendMail?key={{key}}&filename={{filename}}&email=" + email;
+        console.log(key, email);
+
+        if (email != "" && emailReg.test(email)) {
+          $("#error").addClass("d-none");
+
+          window.location.href = URL;
+        } else {
+          $("#error").removeClass("d-none");
+        }
+      });
+    </script> -->
+  </body>
+</html>

@@ -1,0 +1,23 @@
+mongosh
+show dbs                                                                       show available databases
+use dbname                                                                     switch the database to the prefered database
+show collections                                                               show available collections in the database
+db dropDatabase()                                                              delete the database
+db collectionname insertOne({name:"john"})                                     inserts elements to the collections
+db collectionname insertMany([{name:"Ethan"} {name:"Josh"}])                   inserts multiple documents to the collections
+db collectionname find()                                                       read all the documents available in the collections
+db collectionname find() limit(2)                                              reads only first 2 documents in the collections
+db collectionname find() sort({name: 1})                                       reads all the documents such that name is sorted in ascending
+db collectionname find() sort({name: -1})                                      reads all the documents such that name is sorted in desc 
+db newdata find({name: "jimmy"})                                               reads document with name=jimmy
+db newdata find({name: "jimmy"} {name:1 age:1})                              reads document with name=jimmy such that only shows name  age
+db newdata find({name: { eq: "jimmy"}})                                        reads document with name equal to jimmy
+eq = equal 
+ne = not equal
+lt = less than 
+gt = greater than
+in:['' ''] = in the list if available
+nin:[] = not in the list
+exists: true/false = returns if the value exists true and false if not 
+
+                                                                            encryption by encryptor -  project from harikrishna, mohit, nikhil and aalay  Decryption by Encryptor -  project from Harikrishna, Mohit, Nikhil and Aalay 
